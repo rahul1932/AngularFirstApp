@@ -1,0 +1,37 @@
+<div id="divMain">
+    <table>
+        <tr>
+            <td>
+                <div id="divNotebook">
+                    <div>
+                        <input type="text" id="txtAddNotebook" placeholder="Add Notebook" #txtAddNotebook>
+                        <input type="button" id="btnAddNotebook" value="Add" (click)="AddNotebook(txtAddNotebook.value)"
+                            [class.disabled]="!txtAddNotebook.value">
+                    </div>
+                    <br>
+                    <div *ngFor="let note of notes; let i = index" (click)="FilterNotes(note.notebook)">
+                        <div class="notebook" [class.active]="selectedNotebook == note.notebook">
+                            {{note.notebook}}
+                        </div>
+                    </div>
+                </div>
+            </td>
+            <td>
+                <div id="divNotes">
+                    <div>
+                        <input type="text" id="txtAddNote" placeholder="Add Note" #txtAddNote>
+                        <input type="button" id="btnAddNote" value="Add" (click)="AddNote(txtAddNote.value)">
+                    </div>
+                    <br>
+                    <div *ngFor="let filteredNotes of filteredNotes;">
+                        <div *ngFor="let note of filteredNotes.notes;">
+                            <div class="notes">
+                                {{note}}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </td>
+        </tr>
+    </table>
+</div>

@@ -1,0 +1,61 @@
+#divMain {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    padding: 20px;
+}
+
+#divNotebook, #divNotes {
+    display: inline-block;
+}
+
+table {
+    width: 50%;
+    text-align: center;
+    margin: 0 auto;
+}
+
+td {
+    vertical-align: top;
+}
+
+#txtAddNotebook, #txtAddNote {
+    border: 0;
+    border-bottom: 1px solid rgb(184, 184, 184);
+    padding: 5px;
+    font-size: 14px;
+}
+
+#btnAddNotebook, #btnAddNote {
+    background-color: #4b4bfa;
+    border-radius: 5px;
+    color: white;
+    cursor: pointer;
+    border: 0;
+    padding: 5px 15px;
+    font-size: 14px;
+}
+
+.disabled {
+    color: teal;
+}
+
+.notebook, .notes {
+    border: 1px solid #a0a0a0;
+    border-radius: 5px;
+    padding: 5px 15px;
+    display: inline-block;
+    width: 200px;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.notebook:hover, .notes:hover {
+    background-color: #4b4bfa;
+    color: white;
+    cursor: pointer;
+}
+
+.notebook.active, .notes.active {
+    background-color: #fa914b;
+    color: white;
+    cursor: pointer;
+}
